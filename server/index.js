@@ -16,7 +16,7 @@ massive(CONNECTION_STRING).then(db => {
 
 // ENDPOINTS
 
-app.get('/api/meals/:category', ctrl.getMealsByCategory)
+app.get('api/meals/category', ctrl.getMealsByCategory)
 app.post('/api/meals', ctrl.addMeal)
-app.put('/api/meals/:id', ctrl.editMeal)
+app.put('/api/meals/id', ctrl.editMeal)
 app.delete('/api/meals/:id/:category', ctrl.deleteMeal)

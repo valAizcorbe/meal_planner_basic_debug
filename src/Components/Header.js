@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { updateCategory } from '../redux/reducer'
 import '../App.css';
@@ -28,4 +28,4 @@ function mapStatetoProps(state) {
     }
 }
 
-export default connect(mapStatetoProps, {updateCategory})(withRouter(Header))
+export default connect(mapStatetoProps, {updateCategory})(Header)

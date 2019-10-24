@@ -57,19 +57,19 @@ export const updateCategory = (category) => {
 export default function (state = initialState, action) {
     const { type, payload } = action
     switch (type) {
-        case UPDATE_CATEGORY:
+        case UPDATE_CATEGORY + '_FULFILLED':
             return { category: payload }
-        case UPDATE_FORM:
+        case UPDATE_FORM + '_FULFILLED':
             return {
-                category: payload[0],
-                title: payload[1],
-                image: payload[2],
-                description: payload[3],
-                favorited: payload[4],
-                id: payload[5] 
+                category: payload,
+                title: payload,
+                image: payload,
+                description: payload,
+                favorited: payload,
+                id: payload 
             }
         case EDIT_MEAL + '_FULFILLED':
-            return { category: payload[0].category }
+            return { category: payload.category }
         case ADD_MEAL + '_FULFILLED':
             return state
         default:
